@@ -19,6 +19,8 @@ p {
     "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   color: #38d1bf;
-  margin:0 auto;
   align-content:center;
+}
+#msg{
+  margin:0 auto;
 }
