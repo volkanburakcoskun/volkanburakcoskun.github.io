@@ -1,4 +1,3 @@
-/* Genel stil ayarları */
 body {
   margin: 0;
   background-color: #222831;
@@ -6,16 +5,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-x: hidden; /* Yatay kaydırmayı engellemek için */
 }
 
 .menu {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   padding: 10px;
-  height: auto; /* Yüksekliği otomatik yapalım */
-  flex-wrap: wrap; /* Menü öğelerinin birden fazla satıra geçmesine izin verir */
+  height: 100px;
 }
 
 .menu ul {
@@ -23,18 +20,16 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap; /* Menü öğelerinin satıra sığmaması durumunda birden fazla satıra geçmesine izin verir */
+  align-items: flex-end;
 }
 
 .menu .menu-item,
 .menu .logo-text {
-  margin: 10px 15px;
+  margin: 0 15px;
   color: #ffffff;
   font-weight: bold;
   display: flex;
-  align-items: center;
-  text-align: center; /* Menü öğelerini ortalamak için */
+  align-items: flex-end;
 }
 
 .menu .menu-item a {
@@ -60,17 +55,16 @@ body {
   transform: scale(1.2);
 }
 
-.lin-logo {
+.lin-logo{
   margin: 15px;
 }
 
-.lin-logo a i {
-  color: #ffffff;
-  font-size: 50px;
+.lin-logo a i{
+  color:#ffffff; font-size: 50px;
 }
 
-.lin-logo a i:hover {
-  transition: 1s ease;
+.lin-logo a i:hover{
+  transition:  1s ease;
   color: #00BFFF;
   transform: scale(1.2);
 }
@@ -85,28 +79,25 @@ body {
 }
 
 .content {
-  width: 90%;
-  max-width: 1200px;
+  width: 40%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 20px auto; /* Merkeze hizalayarak etrafında boşluk bırakır */
+  margin: auto; /* Yatay ve dikeyde ortalamak için */
 }
 
-.services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.services{
+  display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   font-size: 24px;
   color: #ffffff;
   font-weight: bold;
   list-style-type: none;
-  text-align: center;
+
 }
 
-.contact {
+.contact{
   display: inline-flex;
 }
 
@@ -121,100 +112,13 @@ body {
   animation: typing 2s steps(28, end), blink-caret 0.5s step-end infinite;
 }
 
+
 @keyframes typing {
   from { width: 0; }
-  to { width: 100%; }
+  to { width: 50%; }
 }
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: #00BFFF; }
-}
-
-/* Responsive tasarım */
-@media (max-width: 1200px) {
-  .menu {
-    padding: 15px;
-  }
-
-  .menu .logo-text {
-    font-size: 32px;
-  }
-
-  .menu .menu-item a {
-    font-size: 16px;
-  }
-
-  .content {
-    width: 85%;
-  }
-
-  .services {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 992px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .menu .menu-item {
-    margin: 10px 0;
-  }
-
-  .content {
-    width: 90%;
-  }
-
-  .typewriter-container {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu {
-    padding: 10px;
-  }
-
-  .menu .logo-text {
-    font-size: 28px;
-  }
-
-  .menu .menu-item a {
-    font-size: 14px;
-  }
-
-  .content {
-    width: 95%;
-  }
-
-  .typewriter-container {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .menu .menu-item a {
-    font-size: 12px;
-  }
-
-  .menu .logo-text {
-    font-size: 24px;
-  }
-
-  .content {
-    width: 100%;
-    margin: 10px auto;
-  }
-
-  .typewriter-container {
-    font-size: 18px;
-  }
 }
