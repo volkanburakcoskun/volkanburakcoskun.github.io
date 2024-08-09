@@ -1,28 +1,124 @@
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
+  background-color: #222831;
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  height: 100px;
+}
+
+.menu ul {
+  list-style: none;
   padding: 0;
-  background: #f4f4f4;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
 }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav a {
-  color: #fff;
+.menu .menu-item,
+.menu .logo-text {
   margin: 0 15px;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+}
+
+.menu .menu-item a {
+  color: #ffffff;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.menu a {
+  color: #ffffff;
   text-decoration: none;
 }
 
-main {
-  padding: 20px;
+.menu .logo-text {
+  font-size: 36px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-h2 {
-  color: #333;
+.menu a:hover {
+  animation: shake 2s ease;
+  color: #00BFFF;
+  transform: scale(1.2);
+}
+
+.lin-logo{
+  margin: 15px;
+}
+
+.lin-logo a i{
+  color:#ffffff; font-size: 50px;
+}
+
+.lin-logo a i:hover{
+  transition:  1s ease;
+  color: #00BFFF;
+  transform: scale(1.2);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) scale(1); filter: brightness(100%); }
+  20% { transform: translateX(-5px) scale(1); filter: brightness(120%); }
+  40% { transform: translateX(5px) scale(1); filter: brightness(120%); }
+  60% { transform: translateX(-5px) scale(1); filter: brightness(120%); }
+  80% { transform: translateX(5px) scale(1); filter: brightness(100%); }
+  100% { transform: translateX(0) scale(1.1); filter: brightness(100%); }
+}
+
+.content {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Yatay ve dikeyde ortalamak için */
+}
+
+.services{
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  list-style-type: none;
+
+}
+
+.contact{
+  display: inline-flex;
+}
+
+.typewriter-container {
+  display: inline-block;
+  border-right: 3px solid #00BFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  animation: typing 2s steps(28, end), blink-caret 0.5s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00BFFF; }
 }
