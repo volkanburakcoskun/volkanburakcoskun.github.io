@@ -1,26 +1,28 @@
-* {
-  box-sizing: border-box;
-}
-header,
-footer,
-section {
-  overflow: auto;
-}
-html,
 body {
-  width: 100%;
-  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color:#001011;
+  background: #f4f4f4;
 }
-p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 20px;
-  color: #38d1bf;
-  align-content:center;
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
-#msg{
-  margin:0 auto;
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
 }
