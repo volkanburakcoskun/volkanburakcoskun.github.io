@@ -6,14 +6,16 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-x: hidden; /* Yatay kaydırmayı engellemek için */
 }
 
 .menu {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   padding: 10px;
-  height: 100px;
+  height: auto; /* Yüksekliği otomatik yapalım */
+  flex-wrap: wrap; /* Menü öğelerinin birden fazla satıra geçmesine izin verir */
 }
 
 .menu ul {
@@ -21,16 +23,17 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-wrap: wrap; /* Menü öğelerinin satıra sığmaması durumunda birden fazla satıra geçmesine izin verir */
 }
 
 .menu .menu-item,
 .menu .logo-text {
-  margin: 0 15px;
+  margin: 10px 15px;
   color: #ffffff;
   font-weight: bold;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .menu .menu-item a {
@@ -81,21 +84,25 @@ body {
 }
 
 .content {
-  width: 45%;
+  width: 90%;
+  max-width: 1200px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: auto;
+  margin: 20px auto; /* Merkeze hizalayarak etrafında boşluk bırakır */
 }
 
 .services {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   white-space: nowrap;
   overflow: hidden;
   font-size: 24px;
   color: #ffffff;
   font-weight: bold;
   list-style-type: none;
+  text-align: center;
 }
 
 .contact {
@@ -125,38 +132,12 @@ body {
 
 /* Responsive tasarım */
 @media (max-width: 1200px) {
-  .content {
-    width: 60%;
-  }
-}
-
-@media (max-width: 992px) {
   .menu {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .menu ul {
-    flex-direction: column;
-  }
-
-  .menu .menu-item {
-    margin: 10px 0;
-  }
-
-  .content {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu {
-    padding: 5px;
+    padding: 15px;
   }
 
   .menu .logo-text {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .menu .menu-item a {
@@ -164,7 +145,53 @@ body {
   }
 
   .content {
+    width: 80%;
+  }
+
+  .services {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu .menu-item {
+    margin: 10px 0;
+  }
+
+  .content {
     width: 90%;
+  }
+
+  .typewriter-container {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 10px;
+  }
+
+  .menu .logo-text {
+    font-size: 28px;
+  }
+
+  .menu .menu-item a {
+    font-size: 14px;
+  }
+
+  .content {
+    width: 95%;
   }
 
   .typewriter-container {
@@ -174,7 +201,7 @@ body {
 
 @media (max-width: 576px) {
   .menu .menu-item a {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .menu .logo-text {
@@ -183,6 +210,7 @@ body {
 
   .content {
     width: 100%;
+    margin: 10px auto;
   }
 
   .typewriter-container {
