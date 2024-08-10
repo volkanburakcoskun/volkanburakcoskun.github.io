@@ -25,7 +25,7 @@ body {
 
 .menu .menu-item,
 .menu .logo-text {
-  margin: 0 15px;
+  margin: 0 1rem;
   color: #ffffff;
   font-weight: bold;
   display: flex;
@@ -79,7 +79,6 @@ body {
 }
 
 .content {
-  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +89,7 @@ body {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 24px;
+  font-size: 1rem;
   color: #ffffff;
   font-weight: bold;
   list-style-type: none;
@@ -106,16 +105,16 @@ body {
   border-right: 3px solid #00BFFF;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 24px;
+  font-size: 1.2rem;
   color: #ffffff;
   font-weight: bold;
-  animation: typing 2s steps(28, end), blink-caret 0.5s step-end infinite;
+  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
 }
 
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 50%; }
+  to { width: 100%; }
 }
 
 @keyframes blink-caret {
