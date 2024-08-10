@@ -13,6 +13,7 @@ body {
   justify-content: center;
   padding: 10px;
   height: 100px;
+  min-width:100%;
 }
 .menu .nav:hover {
   border-bottom: 0.2px solid #00BFFF; /* Hafif ve yumuşak bir çizgi */
@@ -33,20 +34,23 @@ body {
   margin: 0;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  min-width:50%;
 }
 
 .menu .menu-item,
 .menu .logo-text {
-  margin: 0 1rem;
+  margin: 0 10rem;
   color: #ffffff;
   font-weight: bold;
   display: flex;
   align-items: flex-end;
 }
 
+
 .menu .menu-item a {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.1rem;
   padding-bottom: 5px;
 }
 
@@ -70,7 +74,7 @@ p span:hover {
 }
 
 .menu .logo-text {
-  font-size: 36px;
+  font-size: 2rem;
   padding-bottom: 0;
   margin-bottom: 0;
 }
