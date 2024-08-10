@@ -14,6 +14,18 @@ body {
   padding: 10px;
   height: 100px;
 }
+.menu .nav:hover {
+  border-bottom: 0.2px solid #00BFFF; /* Hafif ve yumuşak bir çizgi */
+  transition: border-color 1s ease;
+  /* border-bottom: 2px solid #00BFFF; */
+}
+
+.menu .nav {
+  border-bottom: 0.2px solid transparent;
+  transition: border-bottom 1s ease;
+  /* border-bottom: 2px solid #00BFFF; */
+}
+
 
 .menu ul {
   list-style: none;
@@ -41,6 +53,20 @@ body {
 .menu a {
   color: #ffffff;
   text-decoration: none;
+}
+p {
+  font-size: 1.2rem; /* İsteğe bağlı olarak metin boyutunu ayarlayabilirsiniz */
+  border-right: 3px solid #00BFFF;
+  animation: blink-caret 0.5s step-end infinite;
+}
+
+p span {
+  display: inline-block; /* Transform etkisini almak için inline-block olması gerekir */
+  transition: transform 0.3s ease; /* Geçiş süresi ve tipi */
+}
+
+p span:hover {
+  transform: translateY(-5px); /* Mouse üzerindeyken yukarıya kaydır */
 }
 
 .menu .logo-text {
@@ -102,15 +128,23 @@ body {
 
 .typewriter-container {
   display: inline-block;
-  border-right: 3px solid #00BFFF;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 1.2rem;
   color: #ffffff;
   font-weight: bold;
-  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
+  animation: typing 2s steps(40, end)
 }
 
+.rotated-word:hover{
+  transform: rotate(90deg);
+  display: inline-block;
+  transition:  1s ease;
+}
+
+.rotated-word{
+  display: inline-block; /* Dönüşüm işlemi için önemli */
+  transition: transform 1s ease; /* Dönüşüm geçiş efekti */
+}
 
 @keyframes typing {
   from { width: 0; }
