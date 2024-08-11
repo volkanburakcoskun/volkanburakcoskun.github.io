@@ -12,8 +12,6 @@ body {
   align-items: flex-end;
   justify-content: center;
   padding: 10px;
-  height: 100px;
-  min-width:100%;
 }
 .menu .nav:hover {
   border-bottom: 0.2px solid #00BFFF; /* Hafif ve yumuşak bir çizgi */
@@ -35,7 +33,6 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-width:50%;
 }
 
 .menu .menu-item,
